@@ -1,0 +1,180 @@
+DateAudit : 
+active bit,
+created_at datetime,
+created_by fk,
+updated_at datetime,
+updated_by fk
+
+1- Roles : 
+role_id pk,
+name
+
+2- Users : 
+user_id pk,
+role_id fk,
+name,
+mobile,
+username,
+password
+
+3- Batches : 
+batch_id pk,
+en_name,
+ar_name,
+no,
+dateAudit
+
+4- Levels : 
+level_id pk,
+en_name,
+ar_name,
+no,
+dateAudit
+
+5- Term Types : 
+term_type_id pk,
+en_name,
+ar_name,
+dateAudit
+
+6- Terms : 
+term_id pk,
+en_name,
+ar_name,
+no,
+level_id fk,
+term_type_id fk,
+dateAudit
+
+7- Years : 
+year_id pk,
+start_year,
+end_year,
+symbol,
+current_year bit,
+dateAudit
+
+8- Depts : 
+dept_id pk,
+en_name,
+ar_name,
+dateAudit
+
+9- Categories : 
+category_id pk,
+en_name,
+ar_name,
+dateAudit
+
+10- Student Status : 
+status_id pk,
+name,
+dateAudit
+
+11- Students : 
+student_id pk,
+ar_name,
+en_name,
+reg_no,
+reg_symbol,
+gender,
+dob,
+pob,
+mobile,
+nationality,
+blood,
+identity_type,
+identity_id,
+certificate,
+high_school,
+max_marks,
+total_marks,
+avg_marks,
+current_city,
+status_id fk,
+note,
+join_year fk,
+current_registeration unique,
+dateAudit
+
+12- Registerations : 
+registeration_id pk,
+student_id fk,
+batch_id fk,
+term_id fk,
+year_id fk,
+dept_id fk,
+category_id fk,
+dateAudit
+
+13- Plans :
+plan_id pk,
+name,
+dept_id fk,
+batch_id fk,
+dateAudit
+
+14- Subject Types : 
+subject_type_id pk,
+ar_name,
+en_name,
+dateAudit
+
+15- Subjects : 
+subject_id pk,
+ar_name,
+en_name,
+dateAudit
+
+16- Plan Subjects : 
+plan_subject_id pk,
+plan_id fk,
+subject_type_id fk,
+subject_id fk,
+study_term fk,
+transcript_term fk,
+hours,
+min_test,
+max_test,
+min_exam,
+max_exam,
+dateAudit
+
+17- Mark Status : 
+mark_status_id pk,
+ar_name,
+en_name,
+dateAudit
+
+18- Grades : 
+grade_id pk,
+ar_name,
+en_name,
+symbol,
+min_end,
+max_end,
+mark_Status_id fk,
+dateAudit
+
+19- Mark Types : 
+mark_type_id pk,
+name,
+dateAudit
+
+20- Marks : 
+mark_id pk,
+student_id fk,
+plan_subject_id fk,
+test,
+exam,
+total,
+total_of_5,
+grade_id fk,
+mark_status_id fk,
+mark_type_id fk,
+on_100 bit,
+enter_year fk,
+pass_year fk,
+moved_mark bit,
+note,
+dateAudit
