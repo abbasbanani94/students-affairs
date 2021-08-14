@@ -185,3 +185,11 @@ pass_year fk,
 moved_mark bit,
 note,
 dateAudit
+
+24- Boards : done
+board_id pk,
+dept_id fk,
+batch_id fk,
+fail_subjects,
+suspend_subjects,
+dateAudit
