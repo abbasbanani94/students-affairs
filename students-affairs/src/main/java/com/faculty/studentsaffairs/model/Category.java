@@ -13,7 +13,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "categories")
-public class Category extends DateAudit {
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

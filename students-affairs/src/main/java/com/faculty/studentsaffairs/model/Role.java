@@ -19,10 +19,9 @@ public class Role {
     @Column(name = "role_id")
     private Integer id;
 
-    @Column(name = "name", unique = true)
-    private String name;
+    @Column(name = "en_name", unique = true)
+    private String enName;
 
-    public Role(String name) {
-        this.name = name;
-    }
+    @Column(name = "ar_name",columnDefinition = "NVARCHAR(MAX)")
+    private String arName;
 }

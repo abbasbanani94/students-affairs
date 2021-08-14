@@ -1,10 +1,8 @@
 package com.faculty.studentsaffairs.model;
 
-import com.faculty.studentsaffairs.audit.DateAudit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.yaml.snakeyaml.events.Event;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -15,7 +13,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "grades")
-public class Grade extends DateAudit {
+public class Grade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
