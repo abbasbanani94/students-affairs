@@ -1,1 +1,2 @@
 c:\users\abbas\documents\visual studio 2015\Projects\StudentsAffairs\StudentsAffairs\bin\Debug\StudentsAffairs.exe.config
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\StudentsAffairs.exe.config
