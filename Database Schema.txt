@@ -1,15 +1,15 @@
-DateAudit : 
+DateAudit : done
 active bit,
 created_at datetime,
 created_by fk,
 updated_at datetime,
 updated_by fk
 
-1- Roles : 
+1- Roles : done
 role_id pk,
 name
 
-2- Users : 
+2- Users : done
 user_id pk,
 role_id fk,
 name,
@@ -17,27 +17,27 @@ mobile,
 username,
 password
 
-3- Batches : 
+3- Batches : done
 batch_id pk,
 en_name,
 ar_name,
 no,
 dateAudit
 
-4- Levels : 
+4- Levels : done
 level_id pk,
 en_name,
 ar_name,
 no,
 dateAudit
 
-5- Term Types : 
+5- Term Types : done
 term_type_id pk,
 en_name,
 ar_name,
 dateAudit
 
-6- Terms : 
+6- Terms : done
 term_id pk,
 en_name,
 ar_name,
