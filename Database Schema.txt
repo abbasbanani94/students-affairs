@@ -103,6 +103,7 @@ status_id fk,
 note,
 join_year fk,
 current_registeration unique,
+img,
 dateAudit
 
 15- Registerations : done

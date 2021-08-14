@@ -91,4 +91,7 @@ public class Student extends DateAudit {
 
     @Column(name = "current_registration",unique = true)
     private Integer currentRegistration;
+
+    @Column(name = "image_url")
+    private String imageUrl;
 }
