@@ -67,6 +67,10 @@ public class Mark extends DateAudit {
     @Column(name = "note",columnDefinition = "NVARCHAR(MAX)")
     private String note;
 
+    //for editing in dgv to determine which records were edited
+    @Column(name = "edited")
+    private Boolean edited;
+
     @Column(name = "editable")
     private Boolean editable;
 }
