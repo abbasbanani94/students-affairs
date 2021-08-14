@@ -34,8 +34,7 @@ dateAudit
 5- Term Types : done
 term_type_id pk,
 en_name,
-ar_name,
-dateAudit
+ar_name
 
 6- Terms : done
 term_id pk,
@@ -46,7 +45,7 @@ level_id fk,
 term_type_id fk,
 dateAudit
 
-7- Years : 
+7- Years : done
 year_id pk,
 start_year,
 end_year,
@@ -54,37 +53,46 @@ symbol,
 current_year bit,
 dateAudit
 
-8- Depts : 
+8- Depts : done
 dept_id pk,
 en_name,
 ar_name,
 dateAudit
 
-9- Categories : 
+9- Categories : done
 category_id pk,
 en_name,
 ar_name,
 dateAudit
 
-10- Student Status : 
+10- Student Status : done
 status_id pk,
 name,
 dateAudit
 
-11- Students : 
+11- Genders : done
+gender_id pk,
+en_name,
+ar_name,
+
+12- Identity_types : done
+Identity_id pk,
+name
+
+14- Students : done 
 student_id pk,
 ar_name,
 en_name,
 reg_no,
 reg_symbol,
-gender,
+gender_id fk,
 dob,
 pob,
 mobile,
 nationality,
 blood,
-identity_type,
-identity_id,
+identity_id fk,
+identity_no,
 certificate,
 high_school,
 max_marks,
@@ -97,7 +105,7 @@ join_year fk,
 current_registeration unique,
 dateAudit
 
-12- Registerations : 
+15- Registerations : done
 registeration_id pk,
 student_id fk,
 batch_id fk,
@@ -107,26 +115,25 @@ dept_id fk,
 category_id fk,
 dateAudit
 
-13- Plans :
+16- Plans : done
 plan_id pk,
 name,
 dept_id fk,
 batch_id fk,
 dateAudit
 
-14- Subject Types : 
+17- Subject Types : done
 subject_type_id pk,
 ar_name,
-en_name,
-dateAudit
+en_name
 
-15- Subjects : 
+18- Subjects : done
 subject_id pk,
 ar_name,
 en_name,
 dateAudit
 
-16- Plan Subjects : 
+19- Plan Subjects : done
 plan_subject_id pk,
 plan_id fk,
 subject_type_id fk,
@@ -140,13 +147,13 @@ min_exam,
 max_exam,
 dateAudit
 
-17- Mark Status : 
+20- Mark Status : done
 mark_status_id pk,
 ar_name,
 en_name,
 dateAudit
 
-18- Grades : 
+21- Grades : done
 grade_id pk,
 ar_name,
 en_name,
@@ -156,12 +163,12 @@ max_end,
 mark_Status_id fk,
 dateAudit
 
-19- Mark Types : 
+22- Mark Types : done
 mark_type_id pk,
 name,
 dateAudit
 
-20- Marks : 
+23- Marks : done
 mark_id pk,
 student_id fk,
 plan_subject_id fk,
