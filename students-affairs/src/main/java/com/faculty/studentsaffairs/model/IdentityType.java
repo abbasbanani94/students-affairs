@@ -19,6 +19,6 @@ public class IdentityType {
     @Column(name = "identity_id")
     private Integer id;
 
-    @Column(name = "name")
+    @Column(name = "name",columnDefinition = "NVARCHAR(MAX)")
     private String name;
 }

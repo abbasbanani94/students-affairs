@@ -1,2 +1,14 @@
 c:\users\abbas\documents\visual studio 2015\Projects\StudentsAffairs\StudentsAffairs\bin\Debug\StudentsAffairs.exe.config
 C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\StudentsAffairs.exe.config
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\StudentsAffairs.exe
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\StudentsAffairs.pdb
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\Newtonsoft.Json.dll
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\Newtonsoft.Json.xml
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\obj\Debug\StudentsAffairs.csprojResolveAssemblyReference.cache
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\obj\Debug\StudentsAffairs.frm_student.resources
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\obj\Debug\StudentsAffairs.Properties.Resources.resources
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\obj\Debug\StudentsAffairs.csproj.GenerateResource.Cache
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\obj\Debug\StudentsAffairs.exe
+C:\Users\abbas\Desktop\students-affairs\StudentsAffairs\StudentsAffairs\obj\Debug\StudentsAffairs.pdb

@@ -4,6 +4,15 @@ namespace StudentsAffairs
 {
     class Msg
     {
+        internal static void yearOnly(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+                Msg.errorMsg("هذا الحقل لا يقبل كتابة الحروف والرموز", "أرقام فقط");
+            }
+        }
+
         static public void doneMsg(string body, string title)
         {
             MessageBox.Show(body, title, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading);

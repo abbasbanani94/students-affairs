@@ -41,13 +41,13 @@ public class Student extends DateAudit {
     @Column(name = "dob")
     private LocalDate dob;
 
-    @Column(name = "pob")
+    @Column(name = "pob",columnDefinition = "NVARCHAR(MAX)")
     private String pob;
 
     @Column(name = "mobile")
     private String mobile;
 
-    @Column(name = "nationality")
+    @Column(name = "nationality",columnDefinition = "NVARCHAR(MAX)")
     private String nationality;
 
     @Column(name = "blood")
@@ -60,10 +60,10 @@ public class Student extends DateAudit {
     @Column(name = "identity_no")
     private String identityNo;
 
-    @Column(name = "certificate")
+    @Column(name = "certificate",columnDefinition = "NVARCHAR(MAX)")
     private String certificate;
 
-    @Column(name = "high_school")
+    @Column(name = "high_school",columnDefinition = "NVARCHAR(MAX)")
     private String highSchool;
 
     @Column(name = "max_marks")
@@ -75,14 +75,14 @@ public class Student extends DateAudit {
     @Column(name = "avg_marks")
     private BigDecimal avgMarks;
 
-    @Column(name = "current_city")
+    @Column(name = "current_city",columnDefinition = "NVARCHAR(MAX)")
     private String currentCity;
 
     @ManyToOne
     @JoinColumn(name = "status_id")
     private StudentStatus status;
 
-    @Column(name = "note")
+    @Column(name = "note",columnDefinition = "NVARCHAR(MAX)")
     private String note;
 
     @ManyToOne
