@@ -36,5 +36,15 @@ namespace StudentsAffairs
         {
             Close();
         }
+
+        private void frm_student_Load(object sender, EventArgs e)
+        {
+            Dept.findAllDeptsByUser(cmbDept);
+            Batch.findAllBatchesCombo(cmbBatch);
+            Category.findAllCategoriesCombo(cmbCategory);
+            Term.findAllTermsCombo(cmbTerm);
+            Year.findAllYearsCombo(cmbYear,cmbJoin);
+            //ToDo: current year in the cmbYear
+        }
     }
 }

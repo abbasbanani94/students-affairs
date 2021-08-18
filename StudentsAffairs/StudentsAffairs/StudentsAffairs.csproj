@@ -54,7 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Batch.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="ComboDto.cs" />
+    <Compile Include="Dept.cs" />
     <Compile Include="frm_student.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,7 +69,9 @@
     <Compile Include="Msg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Term.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Year.cs" />
     <EmbeddedResource Include="frm_student.resx">
       <DependentUpon>frm_student.cs</DependentUpon>
     </EmbeddedResource>

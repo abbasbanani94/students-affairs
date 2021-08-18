@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Net.Http;
 using System.Windows.Forms;
@@ -92,6 +93,49 @@ namespace StudentsAffairs
                 Msg.errorMsg(ex.Message.ToString(), "Error");
             }
             return false;
+        }
+
+        internal static async void findComboDto (ComboBox cmb,string url)
+        {
+            try
+            {
+                cmb.Items.Clear();
+                HttpClient client = getHttpClient();
+                var response = await client.GetStringAsync(url);
+                List<ComboDto> list = JsonConvert.DeserializeObject<List<ComboDto>>(response);
+                cmb.DataSource = list;
+                cmb.DisplayMember = "name";
+                cmb.ValueMember = "id";
+                cmb.ResetText();
+            }
+            catch (Exception ex)
+            {
+                Msg.errorMsg(ex.Message.ToString(), "Error");
+            }
+        }
+
+        internal static async void findComboDto(ComboBox cmb1,ComboBox cmb2, string url)
+        {
+            try
+            {
+                cmb1.Items.Clear();
+                cmb2.Items.Clear();
+                HttpClient client = getHttpClient();
+                var response = await client.GetStringAsync(url);
+                List<ComboDto> list = JsonConvert.DeserializeObject<List<ComboDto>>(response);
+                cmb1.DataSource = list;
+                cmb1.DisplayMember = "name";
+                cmb1.ValueMember = "id";
+                cmb1.ResetText();
+                cmb2.DataSource = list;
+                cmb2.DisplayMember = "name";
+                cmb2.ValueMember = "id";
+                cmb2.ResetText();
+            }
+            catch (Exception ex)
+            {
+                Msg.errorMsg(ex.Message.ToString(), "Error");
+            }
         }
     }
 }
