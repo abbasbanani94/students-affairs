@@ -63,5 +63,27 @@ namespace StudentsAffairs
             Student.findSchoolYearCombo(cmbSchoolYear);
             Student.findCityCombo(cmbCity);
         }
+
+        private void cmbDept_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbBatch.SelectedValue != null && cmbDept.SelectedValue != null)
+                Registration.findRegistrationDgv(cmbDept.SelectedValue.ToString(), cmbBatch.SelectedValue.ToString(),
+                dgv);
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog o = new OpenFileDialog();
+            o.Filter = "JPEG (*.jpeg)|*.jpeg|PNG (*.png)|*.png|All Files (*.*)|*.*";
+            if (o.ShowDialog() == DialogResult.OK)
+            {
+                pic.Image = Image.FromFile(o.FileName);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
