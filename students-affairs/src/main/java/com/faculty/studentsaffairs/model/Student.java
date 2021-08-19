@@ -63,8 +63,11 @@ public class Student extends DateAudit {
     @Column(name = "certificate",columnDefinition = "NVARCHAR(MAX)")
     private String certificate;
 
-    @Column(name = "high_school",columnDefinition = "NVARCHAR(MAX)")
-    private String highSchool;
+    @Column(name = "school",columnDefinition = "NVARCHAR(MAX)")
+    private String school;
+
+    @Column(name = "school_year")
+    private String schoolYear;
 
     @Column(name = "max_marks")
     private Integer maxMarks;

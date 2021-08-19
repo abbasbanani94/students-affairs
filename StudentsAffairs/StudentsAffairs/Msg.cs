@@ -30,7 +30,7 @@ namespace StudentsAffairs
 
         internal static void formAlreadyOpen(string v)
         {
-            errorMsg(v + " form is already opened, you can't open the same form twice", "Already Open");
+            errorMsg("واجهة " + v + " مفتوحة مسبقا، لا يمكن فتح نفس الواجهة مرتين", "مفتوح مسبقا");
         }
 
         internal static void reportDoesntExist()
@@ -43,7 +43,7 @@ namespace StudentsAffairs
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
-                errorMsg("This field accepts only numbers", "Numbers Only");
+                errorMsg("هذا الحقل لا يقبل الحروف والرموز", "أرقام فقط");
             }
         }
 
@@ -52,13 +52,13 @@ namespace StudentsAffairs
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != (char)Keys.Space)
             {
                 e.Handled = true;
-                errorMsg("This field accepts only letters and symbols", "Letters & Symbols Only");
+                errorMsg("هذا الحقل لا يقبل الارقام", "حروف ورموز فقط");
             }
         }
 
         static public void emptyFields()
         {
-            errorMsg("You must enter data in all mandatory fields", "Empty Fields");
+            errorMsg("يجب ادخال بيانات في جميع الحقول الالزامية", "حقول فارغة");
         }
 
         static public void idAlreadyUsed()

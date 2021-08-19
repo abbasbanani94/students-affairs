@@ -1,6 +1,7 @@
 package com.faculty.studentsaffairs.controller;
 
 import com.faculty.studentsaffairs.dto.ComboDto;
+import com.faculty.studentsaffairs.model.Year;
 import com.faculty.studentsaffairs.service.YearService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,5 +24,12 @@ public class YearController {
         return new ResponseEntity(yearService.findAllYears().stream().map(year -> {
             return new ComboDto(year.getId(),year.getStartYear() + "-" + year.getEndYear());
         }).collect(Collectors.toList()), HttpStatus.OK);
+    }
+
+    @GetMapping("/current-year")
+    public ResponseEntity findTheCurrentYear () throws Exception {
+        Year year = yearService.findCurrentYear();
+        ComboDto dto = new ComboDto(year.getId(),year.getStartYear() + "-" + year.getEndYear());
+        return new ResponseEntity(dto, HttpStatus.OK);
     }
 }

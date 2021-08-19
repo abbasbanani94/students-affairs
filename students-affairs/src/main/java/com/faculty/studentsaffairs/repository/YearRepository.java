@@ -13,4 +13,7 @@ public interface YearRepository extends JpaRepository<Year,Integer> {
 
     @Query(value = "select * from years where active = 1 order by year_id desc",nativeQuery = true)
     Optional<List<Year>> findAllYears();
+
+    @Query(value = "select * from years where active = 1 and current_year = 1", nativeQuery = true)
+    Optional<Year> findCurrentYear();
 }

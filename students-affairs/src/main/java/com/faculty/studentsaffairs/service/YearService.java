@@ -17,4 +17,9 @@ public class YearService {
         return yearRepository.findAllYears().orElseThrow(() ->
                 new Exception("لا يوجد اعوام في النظام، يرجى التواصل مع مدير النظام"));
     }
+
+    public Year findCurrentYear () throws Exception {
+        return yearRepository.findCurrentYear().orElseThrow(() ->
+                new Exception("لا يوجد عام حالي، يرجى التواصل مع مدير النظام"));
+    }
 }

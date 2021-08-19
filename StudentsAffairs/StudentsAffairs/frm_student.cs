@@ -44,7 +44,24 @@ namespace StudentsAffairs
             Category.findAllCategoriesCombo(cmbCategory);
             Term.findAllTermsCombo(cmbTerm);
             Year.findAllYearsCombo(cmbYear,cmbJoin);
-            //ToDo: current year in the cmbYear
+            Year.findCurrentYear(cmbYear);
+            Student.findGendersCombo(cmbGender);
+            Student.findIdentityCombo(cmbIdentity);
+            Student.findStatusCombo(cmbStatus);
+            load();
+        }
+
+        private void load()
+        {
+            cmbStatus.SelectedValue = 1;
+            cmbStatus.Text = "منتظم";
+            Student.findDistinctPob(cmbPob);
+            Student.findDistinctNationality(cmbNationality);
+            Student.findDistinctBlood(cmbBlood);
+            Student.findCertificateCombo(cmbCertificate);
+            Student.findSchoolCombo(cmbSchool);
+            Student.findSchoolYearCombo(cmbSchoolYear);
+            Student.findCityCombo(cmbCity);
         }
     }
 }

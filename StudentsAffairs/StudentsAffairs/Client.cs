@@ -20,6 +20,23 @@ namespace StudentsAffairs
             return client;
         }
 
+        internal static async void findStringList(ComboBox cmb, string url)
+        {
+            try
+            {
+                cmb.ResetText();
+                cmb.Items.Clear();
+                HttpClient client = getHttpClient();
+                var response = await client.GetStringAsync(url);
+                List<string> list = JsonConvert.DeserializeObject<List<string>>(response);
+                cmb.DataSource = list;
+            }
+            catch (Exception ex)
+            {
+                Msg.errorMsg(ex.Message.ToString(), "Error");
+            }
+        }
+
         internal static async void findAllDgv(DataGridView dgv, string url)
         {
             try
